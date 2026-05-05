@@ -1,0 +1,12 @@
+services:
+  - type: static_site
+    name: login
+    env: node
+    plan: free
+    buildCommand: "npm ci && npm run build"
+    publishPath: dist
+    # branch: main   # uncomment and set if you want Render to build from a specific branch
+    # Example env vars (do NOT hardcode secrets here; add them via Render dashboard):
+    # envVars:
+    #   - key: VITE_API_URL
+    #     value: "https://api.example.com"
